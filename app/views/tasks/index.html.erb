@@ -6,6 +6,7 @@
       <!--- <%= check_box_tag 'completed', '1', task.completed, disabled: true %> --->
 
       <%= link_to task.title, task_path(task) %>
+      <p><%= task.details %></p>
 
       <% if task.completed %>
         <p>Completed</p>
@@ -13,8 +14,6 @@
         <p>Not completed</p>
       <% end %>
 
-
-      <p><%= task.details %></p>
       <p><%= link_to "Update", edit_task_path(task) %></p>
       <p><%= link_to "Delete",
         task_path(task),
